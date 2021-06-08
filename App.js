@@ -11,6 +11,7 @@ if(index === 0){
     listArray.data.push(`🔴 ${newItem}`)
     listArray.tasks.push(newItem)
     fs.writeFileSync("./list.json", JSON.stringify(listArray))
+    
 } else if(index === 1){
     const checkId = readlineSync.keyInSelect(listArray.data, "What do you want to check/uncheck? :")
     if(listArray.checked.includes(checkId)){
